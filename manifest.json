@@ -1,0 +1,31 @@
+{
+    "manifest_version": 2,
+
+    "name": "chromeEx-starter",
+    "version": "0.0.1",
+    "description": "%_insert-description_%",
+
+    "icons": {
+        "16": "app/img/16.png",
+        "32": "app/img/32.png",
+        "48": "app/img/48.png",
+        "128": "app/img/128.png"
+    },
+
+    "content_scripts": [{
+            "run_at": "document_start",
+            "matches": ["%_insert-url_%"],
+            "css": ["app/css/overrides.css"],
+            "js": ["app/js/overrides.js"]
+        }
+    ],
+
+    "browser_action": {
+        "default_icon": "app/img/icon.png"
+    },
+
+    "permissions": [
+        "activeTab"
+    ]
+
+}
